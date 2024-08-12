@@ -8,10 +8,10 @@ import os
 load_dotenv()
 
 URL = os.getenv("GOOGLE_SHEET_URL")
-json_path = os.getenv('CREDENTIALS_JSON_PATH')
+JSON_PATH = os.getenv('CREDENTIALS_JSON_PATH')
 
 # Open the Google Sheet
-gc = pygsheets.authorize(service_account_file=json_path)
+gc = pygsheets.authorize(service_account_file=JSON_PATH)
 
 sheet = gc.open_by_url(URL)
 
